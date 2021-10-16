@@ -1,0 +1,36 @@
+// main: ../styles.less
+@import "../vars.less";
+
+.btn {
+    width: 215px;
+    height: 46px;
+
+    background-color: @firstColor;
+    border: none;
+
+    font-family: @fontFamily;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+
+    transition: background .1s ease-in-out;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background-color: darken(@firstColor, 5%);
+        outline: none;
+    }
+
+    &:active {
+        background-color: darken(@firstColor, 10%);
+    }
+
+}
+
+.header__btn {
+    margin-top: 30px;
+}
