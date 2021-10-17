@@ -62,16 +62,16 @@ let readMoreBtn = document.getElementsByClassName('read-more_btn')
         readMoreBtn[i].addEventListener('click', function(){
             let box = readMoreBtn[i].parentElement.parentElement
             let textBox = box.children[1].textContent;
-            let tests = document.getElementById('re')
-            let testText = document.getElementById('test_text')
+            let fullTestimoilas = document.getElementById('full-testimoilas')
+            let fullTestimoilasText = document.getElementById('full-testimoilas_text')
 
-            if (tests.classList.contains('text_active')){
-                tests.classList.remove('text_active')
+            if (fullTestimoilas.classList.contains('full_active')){
+                fullTestimoilas.classList.remove('full_active')
                 return false
 
             }else {
-                tests.classList.add('text_active')
-                testText.textContent=textBox
+                fullTestimoilas.classList.add('full_active')
+                fullTestimoilasText.textContent=textBox
                 return true
             }
         })
@@ -80,10 +80,10 @@ let readMoreBtn = document.getElementsByClassName('read-more_btn')
 
 // Функція для виходу з модального вікна
 function closeModalBox(){
-    let tests = document.getElementById('re')
+    let fullTestimoilas = document.getElementById('full-testimoilas')
 
-    if (tests.classList.contains('text_active')){
-        tests.classList.remove('text_active')
+    if (fullTestimoilas.classList.contains('full_active')){
+        fullTestimoilas.classList.remove('full_active')
 
     }
 }

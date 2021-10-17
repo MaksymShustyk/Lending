@@ -302,6 +302,7 @@ h6 {
 }
 .testimoilas-box.active {
   display: flex;
+  align-items: flex-start;
 }
 .testimoilas-box.read-more::after {
   content: '';
@@ -583,7 +584,7 @@ h6 {
   width: 12px;
   height: 12px;
 }
-.test_border {
+.full-testimoilas_border {
   position: fixed;
   display: none;
   justify-content: center;
@@ -597,17 +598,17 @@ h6 {
   padding: 20px;
   background-color: #000000ba;
 }
-.test_border.text_active {
+.full-testimoilas_border.full_active {
   display: flex;
 }
-.test_border > .test {
+.full-testimoilas_border > .full-testimoilas_box {
   max-width: 895px;
   position: relative;
   padding: 20px;
   background-color: #585858;
   margin: 0 auto;
 }
-.test_border > .test > .close_btn {
+.full-testimoilas_border > .full-testimoilas_box > .full-testimoilas_close_btn {
   background: none;
   width: 30px;
   height: 30px;
@@ -623,11 +624,11 @@ h6 {
   transform: translate(50%, -50%);
   transition: 0.2s linear;
 }
-.test_border > .test > .close_btn:active {
+.full-testimoilas_border > .full-testimoilas_box > .full-testimoilas_close_btn:active {
   background-color: #01a9ff;
   color: #ffffff;
 }
-#test_text {
+#full-testimoilas_text {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 21px;
