@@ -1,0 +1,109 @@
+// main: ..//styles.less
+
+
+.discount-conteiner {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgb(88 88 88 / 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    visibility: hidden;
+
+    &.visible {
+        visibility: visible;
+    }
+}
+
+.discount-form {
+    width: 500px;
+    height: auto;
+    background-color: #585858;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.form-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.form-label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #b9b9b9;
+}
+
+.form-box:first-child {
+    margin-top: 0;
+}
+
+.form-input {
+    padding: 10px;
+    // border: 2px #10aa36 solid;
+    outline: none;
+
+    font-family: @fontFamily;
+    font-weight: 400;
+    font-size: 14px;
+    color: #585858;
+}
+
+.form-span {
+    position:absolute;
+    top: 35px;
+    right: 10px;
+    width: 5%;
+    visibility: hidden;
+}
+
+
+.form-box.corect {
+    &>.form-input{
+        border: 2px #0ca814 solid;
+    }
+
+    &>.form-span {
+        color: #0ca814;
+    }
+
+    &>.form-span>.svg-check-circle {
+        visibility: visible;
+    }
+}
+
+.form-box.error {
+    &>.form-input{
+        border: 2px #a81e0c solid;
+    }
+
+    &>.form-span {
+        color: #a81e0c;
+    }
+
+    &>.form-span>.svg-exclamation-circle {
+        visibility: visible;
+    }
+
+    &>.input-validation {
+        visibility: visible;
+        color: #a81e0c;
+    }
+}
+
+.svg-check-circle,
+.svg-exclamation-circle {
+    visibility: hidden;
+}
+
+.input-validation {
+    visibility: hidden;
+}

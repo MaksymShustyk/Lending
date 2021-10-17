@@ -15,12 +15,11 @@ function size (){
         box[i].classList.add('read-more')
         let divReadMore = document.createElement('div')
         divReadMore.className='testimoilas-box_read-more'
-        divReadMore.innerHTML='<button class="btn read-more_btn" onclick="return modalBox()" href="#">Читать далее</button>'
+        divReadMore.innerHTML='<button class="btn read-more_btn" href="#">Читать далее</button>'
     // document.body.insertBefore(box[i], divReadMore);
     box[i].insertAdjacentElement('afterbegin', divReadMore)
     }
     }
-
 }
 
 size ();
@@ -58,22 +57,26 @@ testimoilasBtn.onclick=function showAllTestimoilas(){
 }
 // Тестова функція показу модального вікна з текстом великих кометарів
 let readMoreBtn = document.getElementsByClassName('read-more_btn')
-function modalBox (){
-    let box = readMoreBtn.parentElement.parentElement
-    let textBox = box.children[1].textContent;
-    let tests = document.getElementById('re')
-    let testText = document.getElementById('test_text')
+    let n = readMoreBtn.length
+    for (let i =0 ;i<n; i++){
+        readMoreBtn[i].addEventListener('click', function(){
+            let box = readMoreBtn[i].parentElement.parentElement
+            let textBox = box.children[1].textContent;
+            let tests = document.getElementById('re')
+            let testText = document.getElementById('test_text')
 
-    if (tests.classList.contains('text_active')){
-        tests.classList.remove('text_active')
-        return false
+            if (tests.classList.contains('text_active')){
+                tests.classList.remove('text_active')
+                return false
 
-    }else {
-        tests.classList.add('text_active')
-        testText.textContent=textBox
-        return true
+            }else {
+                tests.classList.add('text_active')
+                testText.textContent=textBox
+                return true
+            }
+        })
     }
-}
+
 
 // Функція для виходу з модального вікна
 function closeModalBox(){

@@ -627,3 +627,11 @@ h6 {
   background-color: #01a9ff;
   color: #ffffff;
 }
+#test_text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+}
