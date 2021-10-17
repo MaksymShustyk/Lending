@@ -1,3 +1,4 @@
+// Функція розміру боксу для коментарів
 function size (){
 
     let textBox = document.getElementsByClassName('testimoilas-text')
@@ -24,6 +25,7 @@ function size (){
 
 size ();
 
+// функція визначення кількості коментарів які видно за замовчуванням
 let testimoilasLeft = document.getElementsByClassName('testimoilas_column-left')
 let testimoilasRight = document.getElementsByClassName('testimoilas_column-right')
 function showTestimoilas(){
@@ -37,6 +39,8 @@ function showTestimoilas(){
         testimoilasRight[0].children[0].classList.add('active')
     }
 }
+
+// Функція показу всіх коментарів
 showTestimoilas();
 let testimoilasBtn = document.getElementById('all_testimoilas');
 testimoilasBtn.onclick=function showAllTestimoilas(){
@@ -52,7 +56,7 @@ testimoilasBtn.onclick=function showAllTestimoilas(){
     }
     }
 }
-
+// Тестова функція показу модального вікна з текстом великих кометарів
 let readMoreBtn = document.getElementsByClassName('read-more_btn')
 function modalBox (){
     let box = readMoreBtn.parentElement.parentElement
@@ -71,6 +75,7 @@ function modalBox (){
     }
 }
 
+// Функція для виходу з модального вікна
 function closeModalBox(){
     let tests = document.getElementById('re')
 
@@ -79,7 +84,7 @@ function closeModalBox(){
 
     }
 }
-
+// Функція виклику форми
 let btn = document.getElementById('discount-btn');
 btn.onclick = function onClick(){
     const discountForm = document.getElementById('discount-conteiner');
@@ -88,6 +93,8 @@ btn.onclick = function onClick(){
 
 };
 
+
+// Перевірка форми на вірність введених даних
 const form = document.getElementById('form');
 const nameUser = document.getElementById('name');
 const surName = document.getElementById('surname');
