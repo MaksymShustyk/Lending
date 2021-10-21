@@ -29,6 +29,13 @@ h1, h2, h3, h4, h5, h6{
     margin: 0 auto;
 
     background: url("../img/header/background.png") no-repeat top;
+
+    @media (max-width: 1054px) {
+        width: auto;
+    }
+    @media (max-width: 930px){
+        padding: 0 20px 20px 20px;
+    }
 }
 
 // Header
@@ -44,6 +51,9 @@ h1, h2, h3, h4, h5, h6{
 .main-conteiner {
     background: url("../img/background/pryamougolnik_6_219.png") no-repeat;
     background-position: center bottom 10%;
+    @media (max-width: 930px){
+        padding: 20px;
+    }
 }
 
 .main-content {
@@ -72,17 +82,49 @@ h1, h2, h3, h4, h5, h6{
 .discount {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 790px){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .discount_img {
     width: 45%;
     margin-left: -55px;
     margin-top: -25px;
+
+    @media (max-width: 1015px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-left: 0;
+        margin-top: 0;
+
+        &>img{
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 790px){
+
+        &>img{
+            width: 80%;
+            transform: translateX(10%);
+        }
+    }
+
 }
 
 .discount_text {
     width: 55%;
     margin-top: 70px;
+
+    @media (max-width: 790px){
+        width: 80%;
+        text-align: center;
+    }
 }
 
 .discount-title {
@@ -103,6 +145,11 @@ h1, h2, h3, h4, h5, h6{
     line-height: 21px;
     font-weight: 400;
     color: #b9b9b9;
+
+    @media (max-width: 930px){
+        font-size: 11px;
+        line-height: 15px;
+    }
 }
 
 @import "block/discount_form.less";
@@ -115,6 +162,12 @@ h1, h2, h3, h4, h5, h6{
     background: #222;
     margin: 0 auto;
 
+    @media (max-width: 1054px) {
+        width: auto;
+    }
+    @media (max-width: 930px){
+        padding: 0 20px;
+    }
 }
 
 .footer-conteiner {
@@ -132,12 +185,39 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 400;
     text-transform: uppercase;
     color: #ffffff;
+
+    @media (max-width: 700px){
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    @media (max-width: 480px){
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 .footer-contacts_ico {
     color: #01a9ff;
     width: 12px;
     height: 12px;
+
+    @media (max-width: 700px){
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.footer-contacts {
+    @media (max-width: 480px){
+        padding-top: 10px;
+    }
+
+    @media (max-width: 445px){
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .full-testimoilas_border {

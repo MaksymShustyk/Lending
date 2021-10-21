@@ -18,6 +18,10 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @media (max-width: 930px){
+            justify-content: flex-start;
+        }
+
     }
 
     &_subtitle {
@@ -27,5 +31,24 @@
         line-height: 21px;
         font-weight: 400;
         color: #ffffff;
+
+        @media (max-width: 550px){
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        @media (max-width: 445px){
+            font-size: 13px;
+            line-height: 15px;
+        }
+
+        @media (max-width: 445px){
+            font-size: 12px;
+            line-height: 13px;
+        }
     }
+}
+
+.advantages_ico:first-child{
+    height: 42px;
 }

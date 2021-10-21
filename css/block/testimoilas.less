@@ -8,6 +8,11 @@
 .testimoilas {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 635px){
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .testimoilas_column-left,
@@ -17,6 +22,10 @@
     padding: 0 5px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 635px){
+        width: 100%;
+    }
 }
 
 .testimoilas-box {
@@ -80,6 +89,39 @@
     font-weight: 400;
     font-style: italic;
     color: #ffffff;
+
+    @media (max-width: 930px){
+        font-size: 14px;
+    }
+
+    @media (max-width: 840px){
+        font-size: 12px;
+    }
+
+    @media (max-width: 840px){
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    @media (max-width: 840px){
+        font-size: 12px;
+        line-height: 19px;
+    }
+
+    @media (max-width: 635px){
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    @media (max-width: 510px){
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    @media (max-width: 405px){
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
 
 .testimoilas__btn {

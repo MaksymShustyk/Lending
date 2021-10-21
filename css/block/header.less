@@ -12,10 +12,18 @@
 
 .header__logo {
     margin-top: 90px;
+    @media (max-width: 710px){
+        display: block;
+        margin: 90px auto 0 auto;
+    }
 }
 
 .header__column_left {
     margin-right: -65px;
+
+    @media (max-width: 710px){
+        margin-right: 0;
+    }
 }
 
 .header_title {
@@ -29,6 +37,14 @@
 
     color: @firstColor;
     text-shadow: 0 0 25px rgb(15, 201, 248, 0.25);
+
+    @media (max-width: 730px){
+        font-size: 16px;
+    }
+
+    @media (max-width: 710px){
+        text-align: center;
+    }
 }
 
 .header_subtitle {
@@ -38,8 +54,47 @@
     line-height: 1.2;
     font-weight: 400;
     color: #ffffff;
+    @media (max-width: 730px){
+        font-size: 14px;
+    }
+
+    @media (max-width: 710px){
+        text-align: center;
+    }
 }
 
 .header__column_right {
     width: 48%;
+    @media (max-width: 985px){
+        width: 50%;
+    }
+
+    @media (max-width: 710px){
+        display: none;
+    }
+
+    &>img{
+        @media (max-width: 930px){
+            width: 445px;
+        }
+
+        @media (max-width: 930px){
+            width: 415px;
+        }
+
+        @media (max-width: 830px){
+            width: 360px;
+        }
+
+    }
+}
+
+.header__btn {
+    margin-top: 30px;
+
+    @media (max-width: 710px){
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
 }

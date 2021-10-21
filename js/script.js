@@ -96,6 +96,25 @@ btn.onclick = function onClick(){
 
 };
 
+const $input = document.querySelectorAll('[data-type="phone"]');
+
+$input.forEach((element) => {
+  element.addEventListener("input", handleInput, false);
+});
+
+function handleInput(e) {
+  e.target.value = phoneMask(e.target.value);
+}
+
+function phoneMask(phone) {
+  return phone
+    .replace(/\D/g, "")
+    .replace(/^(\d)/, "($1")
+    .replace(/^(\(\d{3})(\d)/, "$1) $2")
+    .replace(/(\d{2})(\d{2})/, "$1-$2")
+    .replace(/(-\d{5})\d+?$/, "$1");
+}
+
 
 // Перевірка форми на вірність введених даних
 const form = document.getElementById('form');
@@ -137,13 +156,13 @@ nameUser.onblur = function checkNameUser() {
     }
   };
   telephone.onblur = function checkTelephone() {
-    let pat = /[\+]\d{3}[\(]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}/;
+    let pat = /[\(]\d{3}[\)][\s]\d{2}[\-]\d{5}/;
     if (pat.test(telephone.value.trim())) {
         telephone.parentElement.className=('form-box corect');
     } else {
         telephone.parentElement.className=('form-box error');
         let nameError = document.getElementById('phone_error');
-        nameError.innerText='Не верно указан номер телефона (Пример: +380(9х)ххх-хх-хх)';
+        nameError.innerText='Не верно указан номер телефона (Пример: (0xх) хх-ххххх)';
         telephone_error=true;
     }
   };

@@ -18,6 +18,12 @@
 
     transition: background .1s ease-in-out;
 
+    @media (max-width: 730px){
+        width: 200px;
+        height: 40px;
+        font-size: 11px;
+    }
+
     &:hover,
     &:focus {
         cursor: pointer;
@@ -29,8 +35,4 @@
         background-color: darken(@firstColor, 10%);
     }
 
-}
-
-.header__btn {
-    margin-top: 30px;
 }

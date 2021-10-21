@@ -3,18 +3,62 @@
     max-width: 895px;
     margin: 0 auto;
     padding-bottom: 50px;
+    @media (max-width: 930px){
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+
 }
 
 .about-us {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 1000px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 790px){
+        margin-top: 20px;
+    }
 }
 
 .about-us_text,
 .about-us_img {
     width: 50%;
     position: relative;
+    @media (max-width: 1000px){
+        width: 65%;
+    }
+
+    @media (max-width: 780px){
+        width: 72%;
+    }
+
+    @media (max-width: 700px){
+        width: 81%;
+    }
+
+    @media (max-width: 620px){
+        width: 90%;
+    }
+
+    @media (max-width: 530px){
+        width: 100%;
+    }
+}
+
+.about-us_img {
+    @media (max-width: 1000px){
+        height: 253px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 530px){
+        display: none;
+    }
 }
 
 .about-us-subtitle {
@@ -25,6 +69,15 @@
     line-height: 21px;
     font-weight: 400;
     color: #ffffff;
+
+    @media (max-width: 1000px){
+        padding-right: 0;
+    }
+
+    @media (max-width: 480px){
+        font-size: 14px;
+        line-height: 19px;
+    }
 }
 
 .about-us_logo__text {
@@ -58,6 +111,13 @@
     &.square1 {
         top: 0;
         transform: translateX(75%);
+
+        @media (max-width: 1000px){
+            left: 10%;
+        }
+        @media (max-width: 850px){
+            left: 3%;
+        }
     }
 
     &.square2 {
