@@ -189,6 +189,11 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 350px) {
+  .advantages {
+    flex-direction: column;
+  }
+}
 .advantages_information {
   margin-top: 60px;
   flex: 0 0 33.333%;
@@ -596,6 +601,12 @@ h6 {
   .testimoilas-text {
     font-size: 12px;
     line-height: 15px;
+  }
+}
+@media (max-width: 350px) {
+  .testimoilas-text {
+    font-size: 12px;
+    line-height: 13px;
   }
 }
 .testimoilas__btn {
